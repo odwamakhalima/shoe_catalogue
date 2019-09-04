@@ -254,7 +254,7 @@ function myShoes() {
 
                 if (checkShoe.brand === basket[d].brand && checkShoe.color === basket[d].color) {
                     
-                    basket[d].quantity = basket[d].quantity + checkShoe.quantity
+                    basket[d].stock = basket[d].stock + checkShoe.quantity
                     
                 }
 
