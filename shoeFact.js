@@ -62,9 +62,6 @@ function myShoes() {
             price: 700,
             stock: 5
         },
-
-
-
         {
             brand: "Adidas",
             color: 'Black',
@@ -121,7 +118,6 @@ function myShoes() {
             price: 700,
             stock: 5
         },
-
         {
             brand: "Puma",
             color: 'Red',
@@ -194,7 +190,6 @@ function myShoes() {
 
     function filter(para) {
         const filterBrand = para.brand;
-        const filterColor = para.color;
 
         const filterShoes = [];
 
@@ -258,7 +253,7 @@ function myShoes() {
                     
                 }
 
-                console.log(checkShoe.quantity)
+               
         }
         
         errorM = 'You Bought The Shoe'
