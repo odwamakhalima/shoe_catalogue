@@ -32,7 +32,8 @@ function shoeCat() {
 	factoryShoes.add(addBrand.value, addColor.value, addSize.value, addPrice.value, addStock.value)
 	errorMs.innerHTML = factoryShoes.error()
 	clearError()
-
+	check();
+console.log(addBrand.value)
 }
 
 function myBask(){
@@ -41,6 +42,7 @@ function myBask(){
 
 	errorMs.innerHTML = factoryShoes.error()
 	clearError()
+	check();
 
 }
 
@@ -75,6 +77,7 @@ function checkout(){
 	
 	errorMs.innerHTML = factoryShoes.error()
 	clearError()
+	check();
 
 }
 

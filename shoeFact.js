@@ -164,12 +164,12 @@ function myShoes() {
                 stock: Number(stock)
             };
 
-            // for (var i = 0; i < theShoes.length; i++) {
-            //     if (theShoes[i].brand === allShoes.brand && theShoes[i].color === allShoes.color) {
-            //         (theShoes[i].stock) += (allShoes.stock)
+            for (var i = 0; i < theShoes.length; i++) {
+                if (theShoes[i].brand === allShoes.brand && theShoes[i].color === allShoes.color) {
+                    (theShoes[i].stock) += (allShoes.stock)
 
-            //     }  
-            // }
+                }  
+            }
 
 
             if (brand.length > 0 && color.length > 0 && size.length > 0) {
