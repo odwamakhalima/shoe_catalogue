@@ -16,7 +16,7 @@ describe('shoeFact', function () {
     })
 
 
-    it('it should return shoes', function () {
+    it('it should return the filtered shoes', function () {
         var factoryShoes = myShoes();
         const filterShoes = factoryShoes.fil({
             brand: 'Nike',
