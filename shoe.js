@@ -55,6 +55,7 @@ function check() {
 	if (myBrand === '' && myColor === '') {
 		filterShoes = factoryShoes.get()
 	}
+
 	else {
 		const para = {
 			brand: myBrand,
@@ -74,7 +75,7 @@ function check() {
 function checkout(){
 	factoryShoes.reset()
 	disShoes.innerHTML ='The Total For The Shoes Is '+ 'R' + factoryShoes.tot()
-	
+ 
 	errorMs.innerHTML = factoryShoes.error()
 	clearError()
 	check();
