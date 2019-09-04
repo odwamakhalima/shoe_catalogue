@@ -3,7 +3,7 @@ function myShoes() {
     var total = 0
     var checking = false
     var errorM = ''
-    var regex = /[a-zA-Z]/g
+    var regex = /(\+|\-)?[0-9!@#$%^&*();,.?" ^$:^\d+=/${/'}`''"\[.*?\]|<>]/i
     var theShoes = [
 
         {
@@ -155,7 +155,7 @@ function myShoes() {
     function addShoe(brand, color, size, price, stock) {
         var test = regex.test(brand)
 
-        if (test == true) {
+        if (test == false) {
             const allShoes = {
                 brand,
                 color,
@@ -168,7 +168,7 @@ function myShoes() {
                 if (theShoes[i].brand === allShoes.brand && theShoes[i].color === allShoes.color) {
                     (theShoes[i].stock) += (allShoes.stock)
 
-                }  
+                }
             }
 
 
@@ -178,6 +178,8 @@ function myShoes() {
             else {
                 errorM = 'Please Enter A Brand,Color,Size,Price and Stock'
             }
+
+
         }
         else {
             errorM = 'Not A Valid Brand'
@@ -190,14 +192,16 @@ function myShoes() {
 
     function filter(para) {
         const filterBrand = para.brand;
+        const filterColor = para.color;
+
 
         const filterShoes = [];
 
-        if (filterBrand !== undefined) {
+        if (filterBrand !== undefined && filterColor !== undefined) {
             for (var i = 0; i < theShoes.length; i++) {
                 const currentShoe = theShoes[i];
 
-                if (currentShoe.brand === filterBrand
+                if (currentShoe.brand === filterBrand && currentShoe.color === filterColor
                 ) {
                     filterShoes.push(currentShoe);
                 }
@@ -247,15 +251,15 @@ function myShoes() {
         for (var d = 0; d < basket.length; d++) {
             var checkShoe = basket[d]
 
-                if (checkShoe.brand === basket[d].brand && checkShoe.color === basket[d].color) {
-                    
-                    basket[d].stock = basket[d].stock + checkShoe.quantity
-                    
-                }
+            if (checkShoe.brand === basket[d].brand && checkShoe.color === basket[d].color) {
 
-               
+                basket[d].stock = basket[d].stock + checkShoe.quantity
+
+            }
+
+
         }
-        
+
         errorM = 'You Bought The Shoe'
         total = 0
         basket = []

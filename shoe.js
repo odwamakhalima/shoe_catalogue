@@ -33,7 +33,7 @@ function shoeCat() {
 	errorMs.innerHTML = factoryShoes.error()
 	clearError()
 	check();
-console.log(addBrand.value)
+
 }
 
 function myBask(){
@@ -52,7 +52,7 @@ function check() {
 	var mySize = size.value
 	var filterShoes = []
 
-	if (myBrand === '') {
+	if (myBrand === '' && myColor === '') {
 		filterShoes = factoryShoes.get()
 	}
 	else {
