@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shoe Catalogue</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script type="text/x-template" class="userTemplate">
+       {{#each filterShoes}}
+        <tr>
+          <td>{{brand}}</td>
+          <td>{{color}}</td>
+          <td>{{size}}</td>
+          <td>{{price}}</td>
+          <td>{{stock}}</td>
+        </tr>
+        {{/each}}     
+    </script>
+    
+</head>
+
+<body>
+    <div class="center">
+        <h1>Shoe Catalogue</h1>
+    </div>
+    <div class="center" style="padding:2em;">
+        <select class="brand" onchange="check();">
+            <option value="">Select Brand</option>
+            <option value="Nike">Nike</option>
+            <option value="Adidas">Adidas</option>
+            <option value="Puma">Puma</option>
+            <option value="Reebok">Reebok</option>
+        </select>
+
+        <select class="color" onchange="check();">
+            <option value="">Select Color</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Black">Black</option>
+            <option value="Green">Green</option>
+            <option value="Pink">Pink</option>
+            <option value="Lemon">Lemon</option>
+        </select>
+
+        <select class="size" onchange="check();">
+            <option value="">Select Size</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+              <button button id="button" type="button" class="button-primary filBtn" style="width:106px;">Search
+            shoe</button>  
+       
+
+    </div>
+
+
+    </div>
+<div class="center">
+    <div style="padding:1em;">Add Shoes Below :
+        <div style="padding:10px;">
+              <input type="text" name="town" value="" id="item" class="addBrand" onfocus="this.value=''"
+                placeholder="Enter Brand"><br>
+        </div>
+        <div style="padding:10px;">
+              <input type="text" name="town" value="" id="item" class="addColor" onfocus="this.value=''"
+                placeholder="Enter Color"><br>
+        </div>
+        <div style="padding:10px;">
+              <input class=" addSize" type="number" onfocus="this.value=''" placeholder="Enter Sizes">
+        </div>
+        <div style="padding:10px;">
+              <input class=" addPrice" type="number" onfocus="this.value=''" placeholder="Enter Price">
+        </div>
+        <div style="padding:10px;">
+              <input class=" addStock" type="number" onfocus="this.value=''" placeholder="Enter Stock">
+        </div>
+
+    </div>
+    <div>
+        <div style="padding:1em;">
+            <button button id="button" type="button" class="button-primary addBtn" style="width:106px;">Add
+                shoe</button>
+           
+                <button button id="button" type="button" class="button-primary baskBtn" style="width:106px;" >Add
+                    basket</button>
+
+                    <button button id="button" type="button" class="button-primary checkBtn" style="width:106px;" >Checkout</button>
+        </div>
+        <div>
+            <div class="show">
+
+            </div>
+   
+        </div>
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-12">
+                <table class="center">
+                    <tbody>
+                        <tr>
+                        <th>Brand</th>
+                        <th>Color</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                    </tr>
+                    </tbody>
+                    <tbody class="userData right">
+        
+                    </tbody>
+                </table>
+            </div>
+            </div>
+    <div  style="padding:1em;">
+        <span class="shoes "><span class="shoes"></span> </span>
+    </div>
+    <div class="error" style="padding:1em;">
+    </div>
+</div>
+</body>
+<script src="shoeFact.js"></script>
+<script src="shoe.js"></script>
+<script src="data.js"></script>
+
+</html>
